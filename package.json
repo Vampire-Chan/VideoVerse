@@ -1,0 +1,29 @@
+{
+  "name": "youtube-clone",
+  "version": "1.0.0",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "dev": "concurrently \"npm run dev --prefix backend\" \"npm start --prefix frontend-web\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@types/markdown-it": "^14.1.2",
+    "concurrently": "^9.2.1"
+  },
+  "dependencies": {
+    "react-markdown": "^10.1.0",
+    "react-player": "^3.3.3",
+    "remark-gfm": "^4.0.1"
+  },
+  "overrides": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  }
+}
