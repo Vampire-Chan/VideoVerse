@@ -1,0 +1,61 @@
+.profile-tabs .nav-link {
+    color: var(--text-color);
+}
+
+[data-theme='light'] .profile-tabs .nav-link.active {
+    color: #212529; /* A dark color for light theme */
+}
+
+[data-theme='dark'] .profile-tabs .nav-link.active {
+    color: white;
+}
+
+.profile-tabs .nav-link.active {
+    background-color: var(--primary-color);
+    font-weight: bold;
+}
+
+.profile-banner {
+    position: relative;
+    z-index: 1;
+}
+
+.profile-header {
+    position: relative;
+    z-index: 2;
+    margin-top: -100px;
+}
+
+.profile-edit-button-col {
+    z-index: 3; /* Ensure the edit button is above other elements */
+}
+
+.edit-profile-btn {
+    padding: 8px 16px;
+    border-radius: 5px;
+    font-weight: 500;
+    transition: all 0.2s ease-in-out;
+    border: 1px solid transparent; /* Base transparent border */
+}
+
+[data-bs-theme='dark'] .edit-profile-btn {
+    background-color: #4a4a4a; /* Grey background */
+    color: #ffffff; /* White text */
+    border-color: #4a4a4a;
+}
+
+[data-bs-theme='dark'] .edit-profile-btn:hover {
+    background-color: #5a5a5a;
+    border-color: #5a5a5a;
+}
+
+[data-bs-theme='light'] .edit-profile-btn {
+    background-color: #f0f0f0; /* Darker white/light grey */
+    color: #212529; /* Black text */
+    border-color: #f0f0f0;
+}
+
+[data-bs-theme='light'] .edit-profile-btn:hover {
+    background-color: #e0e0e0;
+    border-color: #e0e0e0;
+}

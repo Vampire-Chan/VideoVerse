@@ -1,0 +1,75 @@
+.skeletonContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.skeletonElement {
+  background-color: var(--bs-secondary-bg);
+  border-radius: 4px;
+  animation: pulse 1.5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.videoPlayer {
+  height: 450px; /* Adjust as needed */
+}
+
+.title {
+  height: 2rem;
+  width: 70%;
+}
+
+.stats {
+  height: 1rem;
+  width: 30%;
+}
+
+.channelInfo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+}
+
+.channelName {
+  height: 1.5rem;
+  width: 200px;
+}
+
+.description {
+  height: 80px;
+}
+
+.comment {
+  display: flex;
+  gap: 1rem;
+}
+
+.commentAvatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.commentContent {
+  flex-grow: 1;
+}
+
+.commentLine {
+  height: 1rem;
+  margin-bottom: 0.5rem;
+}

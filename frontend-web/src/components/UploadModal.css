@@ -1,0 +1,63 @@
+.upload-modal .modal-content {
+  border-radius: 15px;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+.upload-modal .modal-header {
+  border-bottom: none;
+  padding: 1.5rem 2rem;
+}
+
+.upload-modal .modal-title {
+  font-weight: bold;
+}
+
+.upload-modal .modal-body {
+  padding: 2rem;
+  min-height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease-in-out;
+}
+
+.step-container {
+  display: none;
+  width: 100%;
+  animation: fadeIn 0.5s;
+}
+
+.step-container.active {
+  display: block;
+}
+
+.dropzone {
+  border: 2px dashed #ccc;
+  border-radius: 10px;
+  padding: 4rem;
+  text-align: center;
+  cursor: pointer;
+  transition: border-color 0.3s, background-color 0.3s;
+}
+
+.dropzone.active, .dropzone:hover {
+  border-color: #007bff;
+  background-color: #f8f9fa;
+}
+
+.upload-modal .modal-footer {
+  border-top: none;
+  padding: 1.5rem 2rem;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

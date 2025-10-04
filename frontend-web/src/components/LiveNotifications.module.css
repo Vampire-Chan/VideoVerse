@@ -1,0 +1,183 @@
+.liveNotifications {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+}
+
+.notificationBell {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--bs-primary) 0%, #2563eb 100%);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.notificationBell:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.notificationBell i {
+  font-size: 1.5rem;
+}
+
+.badge {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  min-width: 20px;
+  height: 20px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid white;
+}
+
+.notificationPanel {
+  position: absolute;
+  bottom: 70px;
+  right: 0;
+  width: 360px;
+  max-height: 500px;
+  background: var(--bs-card-bg);
+  border: 1px solid var(--bs-border-color);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  animation: slideUp 0.3s ease;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.panelHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border-bottom: 1px solid var(--bs-border-color);
+  background: rgba(var(--bs-primary-rgb), 0.05);
+}
+
+.panelHeader h6 {
+  margin: 0;
+  font-weight: 600;
+}
+
+.panelHeader button {
+  background: none;
+  border: none;
+  color: var(--bs-body-color);
+  cursor: pointer;
+  padding: 0.25rem;
+  border-radius: 4px;
+  transition: background 0.2s ease;
+}
+
+.panelHeader button:hover {
+  background: var(--bs-tertiary-bg);
+}
+
+.notificationList {
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.notificationItem {
+  padding: 1rem;
+  border-bottom: 1px solid var(--bs-border-color);
+  transition: background 0.2s ease;
+  cursor: pointer;
+}
+
+.notificationItem:hover {
+  background: var(--bs-tertiary-bg);
+}
+
+.notificationItem:last-child {
+  border-bottom: none;
+}
+
+.notificationItem p {
+  margin: 0 0 0.25rem 0;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.notificationItem small {
+  color: var(--bs-secondary-color);
+  font-size: 0.75rem;
+}
+
+.notificationToast {
+  position: fixed;
+  bottom: 90px;
+  right: 20px;
+  background: var(--bs-card-bg);
+  border: 1px solid var(--bs-border-color);
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  z-index: 10000;
+  min-width: 300px;
+  max-width: 400px;
+  opacity: 0;
+  transform: translateX(100%);
+  transition: all 0.3s ease;
+}
+
+.notificationToast.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.toastContent {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.toastContent i {
+  font-size: 1.25rem;
+  color: var(--bs-primary);
+}
+
+.toastContent span {
+  flex: 1;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+@media (max-width: 768px) {
+  .notificationPanel {
+    width: calc(100vw - 40px);
+    right: -280px;
+  }
+
+  .notificationBell {
+    width: 48px;
+    height: 48px;
+  }
+
+  .notificationBell i {
+    font-size: 1.25rem;
+  }
+}

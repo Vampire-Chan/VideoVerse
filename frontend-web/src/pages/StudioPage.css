@@ -1,0 +1,352 @@
+.studio-page .card {
+  border-radius: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  transition: all 0.3s ease;
+}
+
+.studio-page .card:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+.dashboard-stat-card {
+  background: linear-gradient(135deg, var(--card-bg-color) 0%, rgba(62, 166, 255, 0.05) 100%);
+  border: none;
+  border-radius: 12px;
+  padding: 1rem;
+  text-align: center;
+}
+
+.dashboard-stat-card .stat-value {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 0.25rem;
+}
+
+.dashboard-stat-card .stat-label {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.video-preview-card {
+  height: 100%;
+}
+
+.mini-video-player {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%;
+  background: #000;
+  border-radius: 12px 12px 0 0;
+  overflow: hidden;
+}
+
+.mini-video-player video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.video-info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+  margin-top: 0.75rem;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  background: rgba(62, 166, 255, 0.05);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.info-item:hover {
+  background: rgba(62, 166, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+.info-item i {
+  font-size: 1.25rem;
+  color: var(--primary-color);
+}
+
+.info-label {
+  font-size: 0.7rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.info-value {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.analytics-card {
+  height: 100%;
+}
+
+.metric-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  background: rgba(62, 166, 255, 0.05);
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.metric-box:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+}
+
+.metric-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+  color: white;
+}
+
+.metric-icon.views {
+  background: linear-gradient(135deg, #3ea6ff 0%, #2563eb 100%);
+}
+
+.metric-icon.engagement {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+}
+
+.metric-icon.likes {
+  background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+}
+
+.metric-value {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.25rem;
+}
+
+.metric-label {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.chart-container {
+  margin-top: 1.5rem;
+  padding: 0.75rem;
+  background: rgba(62, 166, 255, 0.02);
+  border-radius: 10px;
+}
+
+.chart-controls {
+  display: flex;
+  justify-content: center;
+}
+
+.chart-controls .btn-group .btn {
+  border-radius: 20px;
+  margin: 0 4px;
+  padding: 0.375rem 1rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.chart-controls .btn-group .btn.active {
+  background: linear-gradient(135deg, #3ea6ff 0%, #2563eb 100%);
+  border-color: #3ea6ff;
+  color: white;
+}
+
+.analytics-chart {
+  width: 100%;
+  height: auto;
+}
+
+.analytics-chart text {
+  fill: var(--text-primary);
+}
+
+.analytics-chart line {
+  stroke: var(--text-secondary);
+}
+
+.chart-point {
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.chart-point:hover {
+  r: 6;
+  filter: drop-shadow(0 0 4px #3ea6ff);
+}
+
+.peak-marker .peak-ring {
+  animation: pulse-ring 2s ease-in-out infinite;
+}
+
+@keyframes pulse-ring {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(1.2);
+  }
+}
+
+.studio-table {
+  margin-bottom: 0;
+}
+
+.studio-table thead th {
+  background: rgba(62, 166, 255, 0.05);
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 1rem;
+  border: none;
+}
+
+.studio-table tbody td {
+  padding: 0.75rem;
+  vertical-align: middle;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.studio-table tbody tr {
+  transition: all 0.2s ease;
+}
+
+.studio-table tbody tr:hover {
+  background: rgba(62, 166, 255, 0.03);
+}
+
+.studio-table tbody tr.table-active {
+  background: rgba(62, 166, 255, 0.08);
+  border-left: 3px solid var(--primary-color);
+}
+
+.thumbnail-wrapper {
+  position: relative;
+  min-width: 120px;
+}
+
+.thumbnail-in-table {
+  width: 120px;
+  height: 68px;
+  object-fit: cover;
+  border-radius: 6px;
+  display: block;
+}
+
+.thumbnail-overlay {
+  position: absolute;
+  bottom: 4px;
+  right: 4px;
+}
+
+.duration-badge {
+  background: rgba(0, 0, 0, 0.85);
+  color: white;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.video-title-wrapper {
+  max-width: 300px;
+}
+
+.video-title {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--text-primary);
+  margin-bottom: 0.25rem;
+  line-height: 1.4;
+}
+
+.video-description {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  line-height: 1.4;
+}
+
+.quality-badge {
+  display: inline-block;
+  padding: 4px 12px;
+  background: linear-gradient(135deg, #3ea6ff 0%, #2563eb 100%);
+  color: white;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 0.25rem;
+}
+
+.action-buttons .btn-link {
+  padding: 0.375rem;
+  color: var(--text-secondary);
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.action-buttons .btn-link:hover {
+  color: var(--primary-color);
+  transform: scale(1.15);
+}
+
+.action-buttons .btn-link.text-danger:hover {
+  color: #dc3545 !important;
+}
+
+@media (max-width: 1200px) {
+  .video-info-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .thumbnail-in-table {
+    width: 100px;
+    height: 56px;
+  }
+  
+  .video-title-wrapper {
+    max-width: 150px;
+  }
+  
+  .metric-box {
+    padding: 1rem;
+  }
+  
+  .metric-value {
+    font-size: 1.25rem;
+  }
+}

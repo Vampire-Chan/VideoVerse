@@ -1,0 +1,49 @@
+.actionButtonsGroup {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Space between all buttons */
+}
+
+.iconButton {
+  background-color: transparent;
+  border: none; /* Remove border */
+  color: var(--bs-body-color);
+  padding: 8px 12px;
+  border-radius: 20px; /* Pill shape */
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  transition: all 0.2s ease-in-out;
+}
+
+.iconButton:hover {
+  background-color: var(--bs-gray-300); /* Slightly more pronounced hover background */
+  border-color: transparent;
+}
+
+.iconButton i {
+  font-size: 1.1rem;
+}
+
+.iconButton .bi-hand-thumbs-up,
+.iconButton .bi-hand-thumbs-down {
+  margin-right: 5px; /* Space between icon and count */
+}
+
+.watchButton {
+  border-radius: 20px;
+  padding: 8px 15px;
+  font-weight: bold;
+}
+
+/* Dark theme adjustments */
+.theme-dark .iconButton {
+  background-color: transparent;
+  border-color: transparent;
+  color: var(--bs-light-text);
+}
+
+.theme-dark .iconButton:hover {
+  background-color: var(--bs-gray-700); /* Slightly more pronounced hover background */
+  border-color: transparent;
+}

@@ -1,0 +1,140 @@
+.bannerContainer {
+    height: 250px;
+    background-color: #e9ecef;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    border-radius: 15px;
+    margin-bottom: 100px;
+}
+
+.avatarContainer {
+    position: absolute;
+    bottom: -75px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150px;
+    height: 150px;
+}
+
+/* Base uploader style for the circular avatar */
+.avatarImageUploader {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    border-radius: 50%;
+    background-color: #f8f9fa;
+    border: 4px solid #fff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    background-size: cover;
+    background-position: center;
+    transition: filter 0.2s ease-in-out;
+}
+
+/* Uploader style for the rectangular banner */
+.bannerImageUploader {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    border-radius: 15px; /* Match container */
+    background-color: transparent;
+    background-size: cover;
+    background-position: center;
+    transition: filter 0.2s ease-in-out;
+}
+
+.avatarImageUploader:hover, .bannerImageUploader:hover {
+    filter: brightness(0.9);
+}
+
+.uploadOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+    border-radius: inherit;
+}
+
+.avatarImageUploader:hover .uploadOverlay, .bannerImageUploader:hover .uploadOverlay {
+    opacity: 1;
+}
+
+.icon {
+    font-size: 2rem;
+}
+
+.formLabel {
+    font-weight: 600;
+    color: var(--bs-body-color);
+}
+
+.formControl {
+    border-radius: 10px;
+    padding: 12px 15px;
+    background-color: var(--bs-gray-200);
+    border: 1px solid var(--bs-gray-300);
+}
+
+.formControl:focus {
+    background-color: var(--bs-body-bg);
+    border-color: var(--bs-primary);
+    box-shadow: none;
+}
+
+.saveButton {
+    border-radius: 10px;
+    padding: 12px 30px;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.uploadStatus {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    z-index: 10;
+    white-space: nowrap;
+}
+
+[data-theme="dark"] .formControl {
+    background-color: var(--bs-gray-800);
+    color: var(--bs-light);
+    border-color: var(--bs-gray-700);
+}
+
+[data-theme="dark"] .formControl:focus {
+    background-color: var(--bs-gray-700);
+    border-color: var(--bs-primary);
+    color: var(--bs-light);
+}
+
+.shake {
+    animation: shake 0.5s;
+    background-color: var(--bs-danger);
+}
+
+@keyframes shake {
+    0% { transform: translateX(0); }
+    10%, 90% { transform: translateX(-5px); }
+    20%, 80% { transform: translateX(5px); }
+    30%, 50%, 70% { transform: translateX(-3px); }
+    40%, 60% { transform: translateX(3px); }
+    100% { transform: translateX(0); }
+}
